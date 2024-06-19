@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Luggage
   - Floor
+  - LuggageSpot
+  - Limit
   layers:
   - Default
   - TransparentFX
