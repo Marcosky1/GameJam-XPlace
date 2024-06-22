@@ -6,8 +6,9 @@ using System.Collections;
 public class UIManagerController : MonoBehaviour
 {
     [SerializeField] private VolumeData volumeData;
+    [SerializeField] private SceneManagerController SceneManager;
 
-    private float CurrentTime;
+    [SerializeField] private float CurrentTime;
     [SerializeField] private float StartTimeInSeconds;
     [SerializeField] private TextMeshProUGUI timerText;
 
@@ -37,6 +38,22 @@ public class UIManagerController : MonoBehaviour
     {
         volumeData.SetValues(Master.value, Music.value, SFX.value);
         volumeData.SetVolumeValues();
+
+        if(CurrentTime <= 0)
+        {
+            if(CurrentMaleScore > CurrentFemaleScore)
+            {
+                SceneManager.P1Victory();
+            }
+            else if(CurrentFemaleScore > CurrentMaleScore)
+            {
+                SceneManager.P2Victory();
+            }
+            else
+            {
+                SceneManager.SceneToGo("MainMenu");
+            }
+        }
     }
 
     public IEnumerator TimerBehaviorCycle()

@@ -11,4 +11,12 @@ public class SceneManagerController : ScriptableObject
     {
         SceneManager.LoadScene(scene);
     }
+    public void P1Victory()
+    {
+        SceneManager.LoadScene("Player1Victory");
+    }
+    public void P2Victory()
+    {
+        SceneManager.LoadScene("Player2Victory");
+    }
 }
