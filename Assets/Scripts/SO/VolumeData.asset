@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: VolumeData
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: d118a7770367fa044a9d64bff3b32b21, type: 2}
-  Master: 0.9
-  Music: 0.9
-  SFX: 0.9
+  Master: 0.4779392
+  Music: 0.7295134
+  SFX: 0.5230935
